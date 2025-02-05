@@ -1,0 +1,21 @@
+export const HeaderLocators = {
+    HEADER: '#__next > header ',
+    SIGNUP: '[data-blockid="signup-button"]',
+    SIGNUP_WIDGET: 'body > div:nth-child(8) > div > div',
+    SIGNUP_WIDGET_QR_CODE: 'body > div:nth-child(8) > div > div > div > div.Box-rui__sc-1g1k12l-0.Flex-rui__sc-p3ay74-0.gLVNsb.pvIRJ > svg',
+    SIGNUP_WIDGET_CLOSE_BUTTON: 'body > div:nth-child(8) > div > button',
+    SIGNUP_WIDGET_PHONE_COUNTRY: 'body > div:nth-child(8) > div > div > div > div.Box-rui__sc-1g1k12l-0.jWWFUn > form > span > label.InputWrapper-rui__sc-q0e2zw-0.hqgRRX > div',
+    SIGNUP_WIDGET_PHONE_NUMBER: 'body > div:nth-child(8) > div > div > div > div.Box-rui__sc-1g1k12l-0.jWWFUn > form > span > label.InputWrapper-rui__sc-q0e2zw-0.jqOSpS > div',
+    LOGIN: '#__next > header > div > div.Box-rui__sc-1g1k12l-0.sc-ee472300-2.fnQfSe.jtTtBx > span > div > span > a.ButtonBase__ButtonBaseWrapper-rui__sc-1aqanxw-1.ebyqwN.ButtonBase-rui__sc-1aqanxw-2.ButtonLayout___StyledButtonBase-rui__sc-15pyc45-2.iHLlRu.cFZUmK.Button-rui__sc-1gvtpv4-0.sc-dd364494-0.ggJDYa.eKFeSl',
+    LOGO: '//*[@id="__next"]/header/div/a',
+    NAVBAR_PERSONAL_BUTTON: '//*[@id="__next"]/header/div/div[1]/div/div[1]/a',
+    NAVBAR_PERSONAL_TITLE: '//*[@id="__next"]/header/div/div[1]/div/nav/div/div[1]/a',
+    NAVBAR_BUSINESS_BUTTON: '//*[@id="__next"]/header/div/div[1]/div/div[2]/a',
+    NAVBAR_BUSINESS_TITLE: '//*[@id="__next"]/header/div/div[1]/div/nav/div/div[1]/a',
+    NAVBAR_COMPANY_BUTTON: '//*[@id="__next"]/header/div/div[1]/div/div[4]/a',
+    NAVBAR_COMPANY_TITLE: '//*[@id="__next"]/header/div/div[1]/div/nav/div/div[1]/a',
+    LOCATION_BAR: '#__next > div',
+    LOCATION_BAR_COUNTRY_NAME: '#__next > div > div > div.Box-rui__sc-1g1k12l-0.Position-rui__sc-nh2ik7-0.Position__Relative-rui__sc-nh2ik7-3.jYWGXi.sPvaq.hfyehJ > button > span.Box-rui__sc-1g1k12l-0.Flex-rui__sc-p3ay74-0.Stack-rui__sc-1t382g5-0.HStack-rui__sc-4zbgg7-0.bKfCUZ.lcIfxs.imrahr > span.Box-rui__sc-1g1k12l-0.Text-rui__sc-1be7qv6-0.gagcbC.dQKkNQ',
+    LOCATION_BAR_COUNTRY_FLAG: '#__next > div > div > div.Box-rui__sc-1g1k12l-0.Position-rui__sc-nh2ik7-0.Position__Relative-rui__sc-nh2ik7-3.jYWGXi.sPvaq.hfyehJ > button > span.Box-rui__sc-1g1k12l-0.Flex-rui__sc-p3ay74-0.Stack-rui__sc-1t382g5-0.HStack-rui__sc-4zbgg7-0.bKfCUZ.lcIfxs.imrahr > img',
+
+}

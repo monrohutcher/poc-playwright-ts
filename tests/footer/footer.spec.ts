@@ -6,7 +6,9 @@ const url = "https://www.revolut.com/";
 
 test.describe("Footer - Plan section tests", () => {
 
-    test("Test the title of the Plan section", async ({ page }) => {
+    test("Test the title of the Plan section", {
+        tag: ["@regression"]
+    }, async ({ page }) => {
         await test.step(`Navigate to ${url}.`, async () => {
             await page.goto('/');
             await page.getByRole('button', {name: "Accept all"}).click();
@@ -17,7 +19,9 @@ test.describe("Footer - Plan section tests", () => {
         });
     });
 
-    test("Test the Standard Plan card", async ({ page }) => {
+    test("Test the Standard Plan card", {
+        tag: ["@regression"]
+    }, async ({ page }) => {
         await test.step(`Navigate to ${url}.`, async () => {
             await page.goto('/');
             await page.getByRole('button', {name: "Accept all"}).click();
@@ -33,7 +37,9 @@ test.describe("Footer - Plan section tests", () => {
         });
     });
 
-    test("Test the Plus Plan card", async ({ page }) => {
+    test("Test the Plus Plan card", {
+        tag: ["@regression"]
+    }, async ({ page }) => {
         await test.step(`Navigate to ${url}.`, async () => {
             await page.goto('/');
             await page.getByRole('button', {name: "Accept all"}).click();
@@ -49,7 +55,9 @@ test.describe("Footer - Plan section tests", () => {
         });
     });
 
-    test("Test the Premium Plan card", async ({ page }) => {
+    test("Test the Premium Plan card", {
+        tag: ["@regression"]
+    }, async ({ page }) => {
         await test.step(`Navigate to ${url}.`, async () => {
             await page.goto('/');
             await page.getByRole('button', {name: "Accept all"}).click();
@@ -65,7 +73,9 @@ test.describe("Footer - Plan section tests", () => {
         });
     });
 
-    test("Test the Metal card", async ({ page }) => {
+    test("Test the Metal card", {
+        tag: ["@regression"]
+    }, async ({ page }) => {
         await test.step(`Navigate to ${url}.`, async () => {
             await page.goto('/');
             await page.getByRole('button', {name: "Accept all"}).click();
@@ -81,7 +91,9 @@ test.describe("Footer - Plan section tests", () => {
         });
     });
 
-    test("Test the Ultra card", async ({ page }) => {
+    test("Test the Ultra card", {
+        tag: ["@regression"]
+    }, async ({ page }) => {
         await test.step(`Navigate to ${url}.`, async () => {
             await page.goto('/');
             await page.getByRole('button', {name: "Accept all"}).click();
@@ -100,7 +112,9 @@ test.describe("Footer - Plan section tests", () => {
 
 test.describe('Footer - Legal', async () => {
 
-    test('Test the legal section in footer', async ({page}) => {
+    test('Test the legal section in footer', {
+        tag: ["@regression", "@smoke"]
+    }, async ({page}) => {
         await test.step(`Navigate to ${url}.`, async () => {
             await page.goto('/');
             await page.getByRole('button', {name: "Accept all"}).click();
@@ -113,7 +127,9 @@ test.describe('Footer - Legal', async () => {
 
 test.describe('Footer - Qucik links', async () => {
 
-    test('Test the quick link section in footer', async ({page}) => {
+    test('Test the quick link section in footer', {
+        tag: ["@regression", "@smoke"]
+    }, async ({page}) => {
         await test.step(`Navigate to ${url}.`, async () => {
             await page.goto('/');
             await page.getByRole('button', {name: "Accept all"}).click();
