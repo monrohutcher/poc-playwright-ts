@@ -1,0 +1,28 @@
+name: Run Playwright Tests
+
+on:
+  workflow_dispatch:
+    inputs:
+      feature:
+        description: 'Features to be tested. e.g. footer,header'
+        required: false
+        type: string
+      suite:
+        description: 'Test suite to be used. e.g. regression/smoke'
+        required: true
+        type: choice
+        default: "smoke"
+        options:
+           - smoke
+           - regression
+
+jobs:
+  setup:
+    name: Setup
+    runs-on: ubuntu-latest
+    steps:
+    - name: Display inputs
+      run: | 
+        echo "Feature: ${{ inputs.feature }}"
+        echo "Test suite: ${{ inputs.suite }}"
+    
