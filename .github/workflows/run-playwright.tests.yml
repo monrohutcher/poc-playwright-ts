@@ -27,8 +27,8 @@ on:
            - webkit
 
 jobs:
-  setup:
-    name: Setup
+  test:
+    name: ${{ inputs.feature }} tests from ${{ inputs.suite }} test suite on ${{ inputs.browser }}
     timeout-minutes: 15
     runs-on: ubuntu-latest
     steps:
@@ -52,7 +52,7 @@ jobs:
         echo "Test suite: ${{ inputs.suite }}"
         echo "Browser: ${{ inputs.browser }}"
     
-    - name: Run ${{ inputs.feature }} tests from ${{ inputs.suite }} test suite
+    - name: Run ${{ inputs.feature }} tests from ${{ inputs.suite }} test suite on ${{ inputs.browser }}
       run: npx playwright test tests/${{ inputs.feature }} --project=${{ inputs.browser }} --grep @${{ inputs.suite }}
 
     - uses: actions/upload-artifact@v4
