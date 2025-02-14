@@ -60,14 +60,10 @@ jobs:
     - name: Run ${{ inputs.feature }} tests from ${{ inputs.suite }} test suite on ${{ inputs.browser }}
       run: npx playwright test tests/${{ inputs.feature }} --project=${{ inputs.browser }} --grep @${{ inputs.suite }}
 
-    - name: Get current date
-      id: date
-      run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
-
     - name: Upload test report
       uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
-        name: report-${{ inputs.suite }}-${{ inputs.browser }}-${{ steps.date.outputs.date }}
+        name: report-${{ inputs.suite }}-${{ inputs.browser }}
         path: playwright-report/
         retention-days: 2
