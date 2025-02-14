@@ -28,20 +28,17 @@ on:
 
 jobs:
   test:
-    name: ${{ inputs.feature }} tests from ${{ inputs.suite }} test suite on ${{ inputs.browser }}
+    name: Playwright tests
     timeout-minutes: 15
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup Node 
+      uses: actions/setup-node@v4
       with:
         node-version: lts/*
-
-    - name: Install Node Packages
-      run: |
-        npm cache clean --force
-        npm i
-        npm list --depth=0 --silent
 
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
@@ -51,13 +48,20 @@ jobs:
         echo "Feature: ${{ inputs.feature }}"
         echo "Test suite: ${{ inputs.suite }}"
         echo "Browser: ${{ inputs.browser }}"
+        echo "Triggered by: ${{ github.actor }}"
+        echo "RunID: ${{ github.run_id }}"
     
     - name: Run ${{ inputs.feature }} tests from ${{ inputs.suite }} test suite on ${{ inputs.browser }}
       run: npx playwright test tests/${{ inputs.feature }} --project=${{ inputs.browser }} --grep @${{ inputs.suite }}
 
-    - uses: actions/upload-artifact@v4
+    - name: Get current date
+      id: date
+      run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+
+    - name: Upload test report
+      uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
-        name: playwright-report
+        name: report-${{ inputs.suite }}-${{ inputs.browser }}-${{ steps.date.outputs.date }}
         path: playwright-report/
         retention-days: 2
