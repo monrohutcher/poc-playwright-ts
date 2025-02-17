@@ -1,14 +1,24 @@
 ![Playwright_Logo](https://github.com/user-attachments/assets/af10685c-aa93-4554-b103-e15fe96de52e)
 
-# Playwright PoC
+# Proof of concept project with Playwright
 
 ## Introduction
 The project aims to explore and the capabilities of Playwright, a robust open-source automation library by Microsoft. Playwright is designed for web testing and web scraping, providing a unified API to automate browsers like Chromium, Firefox, and WebKit.
 
+The project contains a small chunk of test scenarios for the following part of a website:
+- footer
+- header
+- geolocation bar
+
+The created tests are categorized and grouped into test suites (smoke, regression).
+
+Project also have a Github Action to execute the tests according its parameters: 
+
+https://github.com/monrohutcher/poc-playwright-ts/actions/workflows/run-playwright.tests.yml
+
 ## Objectives
 - To create a proof of concept code of Playwright's features and functionalities.
 - To provide practical examples leveraging Playwright in various scenarios.
-- To compare Playwright with other web automation tools and highlight its advantages.
 
 ## Methodology
 The project involves:
@@ -25,3 +35,4 @@ The project involves:
 **Network Interception:** Intercepting and modifying network requests for testing different scenarios.
 
 **Selectors and Debugging:** Powerful selector engine and debugging tools for easier test development.
+
